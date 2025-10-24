@@ -1,0 +1,58 @@
+body {
+    /* Set the background for the whole page */
+    background-color: #0a0a0a;
+    color: #00ff00; /* Bright green text */
+    font-family: 'Courier New', Courier, monospace; /* Classic mono font */
+    font-size: 16px;
+    padding: 20px;
+}
+
+.terminal {
+    background-color: #000000;
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 15px;
+    width: 80%;
+    height: 500px;
+    margin: 50px auto; /* Center the terminal */
+    overflow-y: auto; /* Add a scrollbar if content overflows */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2); /* Faint green glow */
+}
+
+#output p {
+    /* Style for each line of text */
+    margin: 0;
+    line-height: 1.5; /* Spacing between lines */
+    word-wrap: break-word; /* Wrap long lines */
+}
+
+.prompt-line {
+    /* The line with the '>' prompt and cursor */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.prompt-line span {
+    margin-right: 10px;
+}
+
+.cursor {
+    /* The blinking cursor */
+    display: inline-block;
+    width: 10px;
+    height: 1.2em; /* Match line height */
+    background-color: #00ff00;
+    /* Animation to make it blink */
+    animation: blink 1s step-end infinite;
+}
+
+/* Blinking animation keyframes */
+@keyframes blink {
+    from, to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #00ff00;
+    }
+}
