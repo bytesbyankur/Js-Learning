@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    .input-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .input-group input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .input-group button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .input-group button:hover {
+      background-color: #218838;
+    }
+    
+    .empty-msg {
+      text-align: center;
+      color: #888888;
+    }
+
+    .description {
+      font-size: 18px;
+    }
+
+    .btn-danger {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+
+    }
+
+    .expense-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .total {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1> Expense Tracker</h1>
+    
+    <div class="input-group">
+      <input type="text" id="descriptionInput" placeholder="Enter expense description...">
+      <input type="number" id="amountInput" placeholder="Enter amount..." step="0.01">
+      <button id="addBtn">Add Expense</button>
+    </div>
+    
+    <div class="resultCard">
+      <p class="emptymsg">No expenses yet. Add one above!</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
