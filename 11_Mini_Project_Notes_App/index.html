@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes App</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+    .container { max-width: 600px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    h1 { margin-bottom: 20px; color: #333; text-align: center; }
+    .input-group { display: flex; gap: 10px; margin-bottom: 20px; }
+    input { flex: 1; padding: 10px; border: 2px solid #ddd; border-radius: 4px; font-size: 16px; }
+    button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+    button:hover { background: #0056b3; }
+    #notesList { list-style: none; }
+    .note-item { background: #f9f9f9; padding: 12px; margin-bottom: 10px; border-left: 4px solid #007bff; display: flex; justify-content: space-between; align-items: start; border-radius: 4px; }
+    .note-content { flex: 1; }
+    .note-text { color: #333; margin-bottom: 5px; }
+    .note-time { color: #999; font-size: 12px; }
+    .delete-btn { padding: 5px 10px; background: #dc3545; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; }
+    .delete-btn:hover { background: #c82333; }
+    .empty-msg { color: #999; text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📝 My Notes</h1>
+    
+    <div class="input-group">
+      <input type="text" id="noteInput" placeholder="Write your note...">
+      <button id="addBtn">Add Note</button>
+    </div>
+    
+    <ul id="notesList"></ul>
+    <p id="emptyMsg" class="empty-msg">No notes yet. Add one above!</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>>
